@@ -21,40 +21,47 @@ This includes examining data on frequency, duration, and timing of bike usage fo
 
 ### Prepare & Process
 
--LibreOffice Calc Process:
+##### LibreOffice Calc Process:
+
 --For each month's .csv file, created a column called ride_length to calculate the length of each ride by subtracting the column started_at from column ended_at (formula: =DX-CX) and formatted output of this column as HH:MM:SS.
+
 --Then createdd a column for day_of_week to calculate the day of the week each ride started (formula: =WEEKDAY(C2, 1).)
 
--[SQL Process](https://github.com/a-tetreault/Cyclistic_tripdata/blob/main/cyclistic_create_tables.sql)
+##### [SQL Process](https://github.com/a-tetreault/Cyclistic_tripdata/blob/main/cyclistic_create_tables.sql):
+
 --Before importing the tripdata .csv files into DBeaver, tables were created for each month and the Full Year.
+
 --All months are then inserted into our new Full_Year table using UNION ALL.
+
 --Full_Year is then altered and updated to include a year and month/year column.
 
 ### Analyze
 
--[SQL Analysis](https://github.com/a-tetreault/Cyclistic_tripdata/blob/main/create_output_table.sql)
+##### [SQL Analysis](https://github.com/a-tetreault/Cyclistic_tripdata/blob/main/create_output_table.sql):
+
 --First, a Member V. Casual table is created with columns for month/year, membership category, and our aggregate functions: total rides, average ride duration, maximum average count daily rides and the respective day of the week this occurs on. 
+
 --Using windowing functions, we can achieve all of our aggregates in one query which we can then push into the table with UPDATE TABLE. Each aggregate we want is nested into its own function and then called during SET in UPDATE. This was especially helpful with calculating Maximum Average DAily Rides, as it required three separate functions before getting what we wanted.
 
 ### Share
 
--[R Markdown With Visualizations and Summaries]([GITHUBLINK!!!!](https://github.com/a-tetreault/Cyclistic_tripdata/blob/main/Cyclistic_analysis.rmd))
+##### [R Markdown With Visualizations and Summaries](https://github.com/a-tetreault/Cyclistic_tripdata/blob/main/Cyclistic_analysis.rmd)
 
 ### Act
 
--Implement a Tiered Pricing Model:
+##### Implement a Tiered Pricing Model:
 
 Given the seasonal variations in casual ridership, introducing a tiered pass system would allow Cyclistic to offer a variety of options, from annual memberships (paid monthly or annually) for frequent riders, to daily/weekly or ride count passes (e.g., 2-ride, 5-ride, 10-ride) for more casual users. This model both accomodates the diverse needs of current riders but also looks towards possible expansion into new markets. A flexible pricing structure can easily be adapted to various regions, accommodating both casual users and frequent riders, and ensuring consistent revenue streams as the customer base grows.
 
--Leverage Seasonal Demand with Targeted Promotions:
+##### Leverage Seasonal Demand with Targeted Promotions:
 
 To capitalize on the May ridership peak, consider launching a Spring/Summer promotion in March/April. This could include discounted rates or bonus incentives to encourage casual riders to transition to memberships while capturing the momentum of early-season demand. A timely, well-targeted offer would optimize acquisition and build a strong customer base ahead of peak season.
 
--Drive Weekend Engagement with Exclusive Member Deals:
+##### Drive Weekend Engagement with Exclusive Member Deals:
 
 Usage data reveals that casual riders peak on Sundays, while members are most active on Thursdays. To drive sustained ridership, introduce a Member-Only Weekend Promotion (Thursday through Sunday). This would incentivize members to ride more consistently during high-traffic days, boosting both engagement and member retention while maintaining steady fleet utilization throughout the week.
 
--Encourage Off-Peak Usage to Optimize Fleet Efficiency:
+##### Encourage Off-Peak Usage to Optimize Fleet Efficiency:
 
 Rewarding off-peak rides (weekdays) with incentives such as discounted rates or bonus rides would balance demand and maximize fleet efficiency. Additionally, this could be framed within a loyalty program, fostering long-term member commitment while smoothing usage patterns and reducing strain on peak-time capacity.
 
