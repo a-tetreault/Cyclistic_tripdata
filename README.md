@@ -45,7 +45,7 @@ This includes examining data on frequency, duration, and timing of bike usage fo
 
 ### Share
 
-##### [R Markdown With Visualizations and Summaries](https://github.com/a-tetreault/Cyclistic_tripdata/blob/012ebe208475f2e6403cc90ed3330489aaa037e5/Cyclistic_analysis.md)
+##### [R Markdown With Visualizations and Summaries](https://github.com/a-tetreault/Cyclistic_tripdata/blob/b5646a0eb66c7497069d884a98cfaad53b5fc7a0/docs/Cyclistic_analysis.html)
 
 ### Act
 
